@@ -1,16 +1,21 @@
 module.exports = {
 	parser: "@typescript-eslint/parser",
+
 	extends: [
+		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
 		"prettier/@typescript-eslint",
-		"plugin:prettier/recommended"
+		"prettier/react",
 	],
-	parserOptions: {
-		ecmaFeatures: {
-			jsx: true
-		}
+
+	env: {
+		es2020: true,
+		browser: true,
+		node: true,
 	},
+
 	rules: {
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/camelcase": "off",
@@ -19,9 +24,10 @@ module.exports = {
 		"react/react-in-jsx-scope": "off",
 		"react/prop-types": "off",
 	},
+
 	settings: {
 		react: {
-			version: "detect"
-		}
-	}
+			version: "detect",
+		},
+	},
 };
