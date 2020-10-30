@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from "react";
 
-import "./App.styl";
+import styles from "./App.styl";
 
 /**
  * App component
  */
 export const App: FunctionComponent = () => {
-	return <div>Starter</div>;
+	return <div className={styles.container}>Starter</div>;
 };
