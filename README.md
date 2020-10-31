@@ -9,7 +9,7 @@ This is a custom starter project with the minimum configuration to start develop
 - React
 - TypeScript
 - Stylus for the CSS
-- Jest and Enzyme configuration
+- Jest configuration
 - Eslint and Prettier configuration
 - Docker configuration
 
@@ -29,18 +29,18 @@ From the root directory inside your terminal follow this steps:
 
 ### Scripts included
 
-Now the project should be ready. The following are the provided scripts:
+Now the project should be ready. The following scripts are also included:
 
 - `$ npm start` Start Webpack and the server in development mode
-- `$ npm test` This will run type check, lint check, prettier check and Jest unit testing
-- `$ npm run prod` Bundle the files and start the server in production mode
-- `$ npm run prod-stop` Stop the production server
+- `$ npm test` This will run type check, lint check, prettier check and unit testing
+- `$ npm run build` Bundle the files
+- `$ npm run serve` Run the production server
 
 ---
 
 ## Docker
 
-The project also comes with Docker configuration files, so it can be run using Docker. It uses the production version of the app. First it bundles the scripts with Webpack, then it starts the pm2 server. It might take some seconds for the server to be ready.
+The project also comes with Docker configuration files. It uses the production version of the app. First it bundles the scripts with Webpack, then it starts the pm2 server. It might take some seconds for the server to be ready.
 
-- Run the command: `$ docker-compose up -d` which will download and install the dependencies and set up the container
+- Run the command `$ npm run docker` which will install the dependencies, bundle the files and start the server
 - Once finished, it will be available in http://localhost:7000 (or your custom port)
