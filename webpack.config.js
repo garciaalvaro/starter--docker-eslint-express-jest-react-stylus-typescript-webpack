@@ -1,6 +1,7 @@
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const name = "bundle";
 
@@ -67,6 +68,16 @@ module.exports = (env, { mode }) => {
 	config.plugins.push(
 		new MiniCssExtractPlugin({
 			filename: `${name}.css`,
+		})
+	);
+
+	// This plugin will include the webpack produced script and style
+	// in the HTML file. It adds a hash to the url, which ensures the
+	// client downloads the latest version, in case there is a cached one.
+	config.plugins.push(
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, "src/index.html"),
+			hash: true,
 		})
 	);
 
