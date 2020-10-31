@@ -3,7 +3,7 @@ version: "3.7"
 services:
   starter--docker-eslint-express-jest-react-stylus-typescript-webpack:
     build: .
-    image: nodejs:13-alpine
+    image: nodejs:15
     container_name: starter--docker-eslint-express-jest-react-stylus-typescript-webpack
     restart: unless-stopped
     ports:

@@ -15,6 +15,7 @@
 		"prettier": "prettier --write \"{build,src,types}/**/*.{js,ts,tsx}\" \"*.js\"",
 		"test:unit": "jest --watch",
 		"docker": "docker-compose up -d",
+		"docker:start": "npm run build & npm run serve:docker",
 		"docker:stop": "docker-compose down",
 		"serve": "pm2 start server.js --name starter--docker-eslint-express-jest-react-stylus-typescript-webpack",
 		"serve:stop": "pm2 stop starter--docker-eslint-express-jest-react-stylus-typescript-webpack",
