@@ -7,7 +7,7 @@
 		"prebuild": "npm run clean:dist",
 		"build": "webpack --mode=production",
 		"clean:dist": "rm -rf dist",
-		"dev": "webpack --mode=development & npm run server:dev",
+		"dev": "webpack --mode=development & npm run serve:dev",
 		"test": "npm run test:types && npm run test:lint && npm run test:prettier",
 		"test:types": "tsc",
 		"test:lint": "eslint \"{build,src,types}/**/*.{js,ts,tsx}\" \"*.js\"",
