@@ -1,7 +1,7 @@
 {
 	"name": "starter--docker-eslint-express-jest-react-stylus-typescript-webpack",
 	"version": "1.0.0",
-	"description": "Starter project with the minimum configuration to begin development",
+	"description": "App with the minimum configuration to start a new project",
 	"scripts": {
 		"start": "npm run dev",
 		"prebuild": "npm run clean:dist",
