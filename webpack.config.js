@@ -7,9 +7,10 @@ const name = "bundle";
 
 module.exports = (env, { mode }) => {
 	const is_production = mode === "production";
+	const is_development = !is_production;
 
 	const config = {
-		watch: !is_production,
+		watch: is_development,
 
 		entry: path.resolve(__dirname, "src/entry.ts"),
 
