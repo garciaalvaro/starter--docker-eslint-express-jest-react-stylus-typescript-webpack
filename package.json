@@ -4,7 +4,7 @@
 	"description": "Starter project with the minimum configuration to begin development",
 	"scripts": {
 		"start": "npm run dev",
-		"prebuild": "npm run test && npm run clean:dist",
+		"prebuild": "npm run clean:dist",
 		"build": "webpack --mode=production",
 		"clean:dist": "rm -rf dist",
 		"dev": "webpack --mode=development & npm run server:dev",
