@@ -16,7 +16,7 @@
 		"test:unit": "jest --watch",
 		"docker": "docker-compose up -d",
 		"docker:recreate": "docker-compose down && docker-compose build --no-cache && docker-compose up",
-		"docker:start": "npm run build & npm run serve:docker",
+		"docker:start": "npm run build && npm run serve:docker",
 		"docker:stop": "docker-compose down",
 		"serve": "pm2 start server.js --name starter--docker-eslint-express-jest-react-stylus-typescript-webpack",
 		"serve:stop": "pm2 stop starter--docker-eslint-express-jest-react-stylus-typescript-webpack",
