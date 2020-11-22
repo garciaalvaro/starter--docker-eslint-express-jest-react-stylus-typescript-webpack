@@ -1,4 +1,4 @@
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -86,10 +86,10 @@ module.exports = (env, { mode }) => {
 		config.optimization = {
 			minimize: true,
 			minimizer: [
-				new OptimizeCSSAssetsPlugin(),
+				new CssMinimizerPlugin(),
 
 				// As we are using a custom optimization, making use of
-				// OptimizeCSSAssetsPlugin, we also need to specify TerserPlugin
+				// CssMinimizerPlugin, we also need to specify TerserPlugin
 				new TerserPlugin({ extractComments: false }),
 			],
 		};
