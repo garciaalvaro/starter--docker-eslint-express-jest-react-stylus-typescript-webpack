@@ -77,8 +77,9 @@ module.exports = (env, { mode }) => {
 	// client downloads the latest version, in case there is a cached one.
 	config.plugins.push(
 		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, "src/index.html"),
+			template: path.resolve(__dirname, "src/assets/index.html"),
 			hash: true,
+			favicon: path.resolve(__dirname, "src/assets/favicon.png"),
 		})
 	);
 
