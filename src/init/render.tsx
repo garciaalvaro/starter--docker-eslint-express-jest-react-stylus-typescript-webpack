@@ -1,6 +1,14 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { App } from "../components/App";
 
-render(<App />, document.getElementById("app"));
+const $container = document.getElementById("app");
+
+if (!$container) {
+	throw new Error("#app HTML element was not found");
+} else {
+	const root = createRoot($container);
+
+	root.render(<App />);
+}
